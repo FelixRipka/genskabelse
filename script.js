@@ -1,3 +1,15 @@
+let videos = []
+videos.push("/files/boatvideo1.mp4");
+videos.push("/files/boatvideo2.mp4");
+videos.push("/files/boatvideo3.mp4");
+
+let randomVideo = Math.floor((Math.random() * videos.length));
+
+let videoPls = () => {
+    return;
+};
+
+
 // Mobilmenu toggle
 const mobileBtn = document.getElementById("mobileMenuBtn");
 const nav = document.querySelector(".nav ul");
