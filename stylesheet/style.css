@@ -130,3 +130,78 @@ body {
         display: block;
     }
 }
+
+/* CAROUSEL SECTION */
+.carousel-section {
+    width: 100%;
+    padding: 80px 0;
+    position: relative;
+    background: #fff;
+
+    /* VIGTIGT: Kun 3 billeder synlige */
+    overflow: hidden;
+}
+
+/* Track der indeholder ALLE billeder */
+.carousel-track {
+    display: flex;
+    gap: 40px;
+    transition: transform 0.5s ease;
+    width: max-content;
+}
+
+
+
+/* Et item = ét billede */
+.carousel-item {
+    width: 500px;
+    height: 333spx;
+    position: relative;
+    flex-shrink: 0;
+    border-radius: 6px;
+    overflow: hidden;
+    
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-item h3 {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: #fff;
+    font-size: 22px;
+    font-weight: bold;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.5);
+}
+
+/* BUTTONS */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.4);
+    color: #fff;
+    border: none;
+    font-size: 40px;
+    padding: 10px 18px;
+    cursor: pointer;
+    z-index: 5;
+    border-radius: 4px;
+}
+
+.carousel-btn.left {
+    left: 40px;
+}
+
+.carousel-btn.right {
+    right: 40px;
+}
+
+.carousel-btn:hover {
+    background: rgba(0,0,0,0.6);
+}
