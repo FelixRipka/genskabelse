@@ -11,7 +11,8 @@
     <script src="script.js" defer></script>
 </head>
 
-<body>
+<body onload="bg()">
+
 
     <header class="header">
         <div>
@@ -25,6 +26,8 @@
                 <li><a href="#">Information</a></li>
                 <li><a href="#">Kontakt</a></li>
                 <li><a href="#">Referencer</a></li>
+                <li><a href="#"><img src="files/profile.svg" height="23" ></a></li>
+                <li><a href="#"><img src="files/search.svg" height="20" ></a></li>
             </ul>
         </nav>
 
@@ -34,20 +37,20 @@
     <section class="hero">
 
         
-        <video class="hero-video" autoplay muted loop playsinline>
-            <source src="files/boatvideo1.mp4" type="video/mp4" id="video">
-        </video>
+        <video id = "video" class="hero-video" autoplay muted loop playsinline></video>
 
         <div class="hero-overlay"></div>
 
         <div class="hero-content">
-        
-            <p class="tagline">Liebhaverboliger i hele Danmark<br>Grundlagt en solskinsdag i 1974</p>
-
+            <p class="tagline">LIEBHAVERBOLIGER I HELE DANMARK<br>GRUNDLAGT EN SOLSKINSDAG I 1974</p>
+            
             <div class="cta-buttons">
-                <a class="cta" href="#">Boliger til salg</a>
-                <a class="cta secondary" href="#">Bestil vurdering</a>
+                <a class="cta" href="#">BOLIGER TIL SALG</a>
+                <a class="cta secondary" href="#">BESTIL VURDERING</a>
             </div>
+        </div>
+        <div>
+            <img src="files/arrow.svg" class="hero-arrow">
         </div>
     </section>
 

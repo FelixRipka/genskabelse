@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color:#fff;
 }
 
 body {
@@ -20,6 +21,7 @@ body {
     position: absolute;
     top: 0;
     z-index: 10;
+    color: #fff;
 }
 
 .logo {
@@ -35,8 +37,22 @@ body {
 
 .nav a {
     text-decoration: none;
-    color: #fff;
     font-size: 16px;
+}
+
+header:hover{
+    background-color: white;
+    transition: all 1s ease;
+}
+
+header:hover a {
+    color: #222;
+    transition: all 1s ease;
+}
+
+header:hover .logo, header:hover img {
+    filter: invert(100%);
+    transition: all 1s ease;
 }
 
 .mobile-menu-btn {
@@ -72,7 +88,7 @@ body {
 .hero-content {
     position: absolute;
     bottom: 120px;
-    left: 60px;
+    left: 50%;
     color: #fff;
 }
 
@@ -86,8 +102,8 @@ body {
     margin-top: 10px;
     font-size: 20px;
     line-height: 1.4;
-     align-items: center;
-     position:fixed;
+    align-items: center;
+    position:fixed;
     bottom: 400px;
     left: 50%;
     transform: translateX(-50%);
@@ -98,7 +114,7 @@ body {
     margin-top: 30px;
     display: flex;
     gap: 20px;
-    position:fixed;
+    position: fixed;
     bottom: 320px;
     left: 50%;
     transform: translateX(-50%);
@@ -117,6 +133,36 @@ body {
     background: transparent;
     border: 1px solid #fff;
     color: #fff;
+}
+
+.hero-arrow {
+    display: flex;
+    width: 20px;
+    height: 48px;
+    position: absolute;
+    bottom: 30px;
+    left: calc(50%);
+    justify-content: center;
+    z-index: 1;
+    animation-name: titleAnimationIn;
+    animation-duration: 3s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+
+@keyframes titleAnimationIn{
+    0% {
+    transform: translateY(0);
+    }
+    
+    40% {
+    transform: translateY(16px);
+    }
+    
+    100% {
+    transform: translateY(0);
+    }
 }
 
 /* MOBILE */

@@ -1,13 +1,19 @@
-let videos = []
+let videos = [];
 videos.push("/files/boatvideo1.mp4");
 videos.push("/files/boatvideo2.mp4");
 videos.push("/files/boatvideo3.mp4");
+videos.push("/files/skovliv1.mp4");
+videos.push("/files/skovliv3.mp4");
 
-let randomVideo = Math.floor((Math.random() * videos.length));
+const v = document.getElementById("video");
 
-let videoPls = () => {
-    return;
-};
+function bg(){
+    let randomVideo = Math.floor(Math.random() * videos.length);
+
+    let mov = videos[randomVideo];
+
+    v.innerHTML += `<source src= ${mov} type="video/mp4">`;
+}
 
 
 // Mobilmenu toggle

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20.308" height="48.082">
+  <defs>
+    <linearGradient id="a" x1="2.266" y1="1" x2="2.278" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset=".611" stop-color="#a7a7a7"/>
+      <stop offset="1" stop-color="gray" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <g data-name="Group 185">
+    <path data-name="Path 195" d="M19.757 37 10.53 47l-10-10" fill="none" stroke="#fff" stroke-width="1.5"/>
+  </g>
+  <path data-name="Rectangle 114" transform="translate(9.53)" fill="url(#a)" d="M0 0h1.5v47H0z"/>
+</svg>
