@@ -24,11 +24,6 @@ body {
     color: #fff;
 }
 
-header:hover{
-    background-color: white;
-    color: #222;
-}
-
 .logo {
     width: 90%;
     height: 100%;
@@ -43,6 +38,17 @@ header:hover{
 .nav a {
     text-decoration: none;
     font-size: 16px;
+}
+
+header:hover{
+    background-color: white;
+    color: #222;
+    transition: all 0.9s ease;
+}
+
+logo:hover{
+    fill:#000;
+    color:#000;
 }
 
 .mobile-menu-btn {
