@@ -2,6 +2,8 @@ let videos = [];
 videos.push("/files/boatvideo1.mp4");
 videos.push("/files/boatvideo2.mp4");
 videos.push("/files/boatvideo3.mp4");
+videos.push("/files/skovliv1.mp4");
+videos.push("/files/skovliv3.mp4");
 
 const v = document.getElementById("video");
 

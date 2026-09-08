@@ -132,6 +132,39 @@ logo:hover{
     color: #fff;
 }
 
+.hero-arrow {
+    display: flex;
+    width: 20px;
+    height: 48px;
+    position: absolute;
+    bottom: 16px;
+    left: calc(50% - 24px);
+    justify-content: center;
+    z-index: 1;
+    opacity: 1;
+    animation-name: titleAnimationIn;
+    animation-duration: 3s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes titleAnimationIn{
+    0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  40% {
+    transform: translateY(16px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 /* MOBILE */
 @media (max-width: 900px) {
     .nav ul {
