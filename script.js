@@ -43,7 +43,7 @@ const nextBtn = document.getElementById("carouselNext");
 let items = document.querySelectorAll(".carousel-item");
 const itemsPerSlide = 3;
 
-// KLON de første 3 billeder og tilføj dem bagest
+// KLON de første 3 billeder og tilføj dem bagerst
 for (let i = 0; i < itemsPerSlide; i++) {
     const clone = items[i].cloneNode(true);
     track.appendChild(clone);
@@ -54,51 +54,61 @@ items = document.querySelectorAll(".carousel-item");
 
 let index = 0;
 
-function updateCarousel() {
+function updateCarousel(animate = true) {
     const itemWidth = items[0].offsetWidth + 40; // 40px gap
     const slideWidth = itemWidth * itemsPerSlide;
 
-    track.style.transition = "transform 0.5s ease";
+    track.style.transition = animate ? "transform 0.5s ease" : "none";
     track.style.transform = `translateX(${-index * slideWidth}px)`;
 }
 
+// NEXT
 nextBtn.addEventListener("click", () => {
     index++;
 
-    const itemWidth = items[0].offsetWidth + 40;
-    const slideWidth = itemWidth * itemsPerSlide;
+    const totalSlides = Math.ceil(items.length / itemsPerSlide);
 
-  
-    if (index * itemsPerSlide >= items.length - itemsPerSlide) {
-        track.style.transition = "none";
-        track.style.transform = `translateX(0px)`;
-        index = 1; 
-        setTimeout(updateCarousel, 20);
+    // Hvis vi rammer sidste slide (klonerne)
+    if (index === totalSlides - 1) {
+        updateCarousel(true); // animér til klonerne
+
+        // Efter animation → hop usynligt tilbage til slide 0
+        setTimeout(() => {
+            index = 0;
+            updateCarousel(false); // ingen animation
+        }, 500);
     } else {
-        updateCarousel();
+        updateCarousel(true);
     }
 });
 
+// PREV
 prevBtn.addEventListener("click", () => {
     index--;
 
-    const itemWidth = items[0].offsetWidth + 40;
-    const slideWidth = itemWidth * itemsPerSlide;
+    const totalSlides = Math.ceil(items.length / itemsPerSlide);
 
-
+    // Hvis vi går baglæns forbi slide 0
     if (index < 0) {
-        track.style.transition = "none";
-        const lastRealSlide = Math.floor((items.length - itemsPerSlide * 2) / itemsPerSlide);
-        index = lastRealSlide;
-        track.style.transform = `translateX(${-index * slideWidth}px)`;
-        setTimeout(updateCarousel, 20);
+        // Hop usynligt til klon-slidet (sidste slide)
+        index = totalSlides - 1;
+        updateCarousel(false);
+
+        // Animér tilbage til sidste rigtige slide
+        setTimeout(() => {
+            index = totalSlides - 2;
+            updateCarousel(true);
+        }, 20);
+
     } else {
-        updateCarousel();xw
+        updateCarousel(true);
     }
 });
 
 
 
+
+// DRAWER
 const drawer = document.getElementById("valuationDrawer");
 const drawerBtn = document.querySelector(".page-banner__button");
 const drawerClose = document.getElementById("drawerClose");
