@@ -38,6 +38,8 @@ body {
 .nav a {
     text-decoration: none;
     font-size: 16px;
+    font-family: sans-serif;
+    font-weight: 100;
 }
 
 header:hover{
@@ -67,6 +69,10 @@ header:hover .logo, header:hover img {
     height: 100vh;
     position: relative;
     overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -83,56 +89,69 @@ header:hover .logo, header:hover img {
     position: absolute;
     inset: 0;
     background: rgba(0,0,0,0.35);
+    z-index: 0;
 }
 
 .hero-content {
-    position: absolute;
-    bottom: 120px;
-    left: 50%;
     color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    z-index: 2;
 }
 
 .hero-content h1 {
-    font-size: 64px;
+    font-size: 40px;
     letter-spacing: 4px;
-    align-items: center;
+    font-weight: 100;
+    font-family: sans-serif;
+    margin-bottom: 10px;
+}
+
+.hero-content h2 {
+    font-size: 20px;
+    letter-spacing: 4px;
+    font-weight: 100;
+    font-family: sans-serif;
 }
 
 .tagline {
     margin-top: 10px;
     font-size: 20px;
     line-height: 1.4;
-    align-items: center;
-    position:fixed;
-    bottom: 400px;
-    left: 50%;
-    transform: translateX(-50%);
-    
+    text-align: center;
 }
 
 .cta-buttons {
     margin-top: 30px;
     display: flex;
     gap: 20px;
-    position: fixed;
-    bottom: 320px;
-    left: 50%;
-    transform: translateX(-50%);
+    justify-content: center;
 }
 
 .cta {
     padding: 12px 28px;
-    background: #fff;
-    color: #000;
+    color: #fff;
     text-decoration: none;
     font-size: 16px;
-    border-radius: 4px;
+    border-radius: 0px;
+    border-color: #fff;
+    font-family: sans-serif;
+    font-weight: 100;
+    background: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    border-radius: 0px;
+    border-color: #fff;
 }
 
 .cta.secondary {
     background: transparent;
     border: 1px solid #fff;
     color: #fff;
+    border-radius: 0px;
+    border-color: #fff;
 }
 
 .hero-arrow {
@@ -267,6 +286,13 @@ header:hover .logo, header:hover img {
     font-family: sans-serif;
     font-weight: 100;
     margin-bottom: 30px;
+    color:#000;
+}
+
+.page-banner__description {
+    color: #000;
+    font-family: sans-serif;
+    font-weight: 100;
 }
 
 .page-banner__content {
