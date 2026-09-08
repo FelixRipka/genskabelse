@@ -42,13 +42,17 @@ body {
 
 header:hover{
     background-color: white;
-    color: #222;
-    transition: all 0.9s ease;
+    transition: all 1s ease;
 }
 
-logo:hover{
-    fill:#000;
-    color:#000;
+header:hover a {
+    color: #222;
+    transition: all 1s ease;
+}
+
+header:hover .logo, header:hover img {
+    filter: invert(100%);
+    transition: all 1s ease;
 }
 
 .mobile-menu-btn {
