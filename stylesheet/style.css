@@ -48,7 +48,7 @@ header:hover{
 }
 
 header:hover a {
-    color: #222;
+    color: #000;
     transition: all 1s ease;
 }
 
@@ -57,10 +57,15 @@ header:hover .logo, header:hover img {
     transition: all 1s ease;
 }
 
+header:hover .mobile-menu-btn {
+    filter: invert(0%);
+    transition: all 1s ease;
+}
+
 .mobile-menu-btn {
     display: none;
+    filter: invert(100%);
     font-size: 28px;
-    color: #fff;
     cursor: pointer;
 }
 
