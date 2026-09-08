@@ -67,7 +67,7 @@ prevBtn.addEventListener("click", () => {
     const itemWidth = items[0].offsetWidth + 40;
     const slideWidth = itemWidth * itemsPerSlide;
 
-    // Hvis vi går før slide 0 → hop til sidste ægte slide
+
     if (index < 0) {
         track.style.transition = "none";
         const lastRealSlide = Math.floor((items.length - itemsPerSlide * 2) / itemsPerSlide);
@@ -75,6 +75,15 @@ prevBtn.addEventListener("click", () => {
         track.style.transform = `translateX(${-index * slideWidth}px)`;
         setTimeout(updateCarousel, 20);
     } else {
-        updateCarousel();
+        updateCarousel();xw
     }
 });
+
+
+<script>
+// When the user clicks on <div>, open the popup
+function myFunction() {
+  var popup = document.getElementById("myPopup");
+  popup.classList.toggle("show");
+}
+</script>
