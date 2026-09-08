@@ -249,53 +249,93 @@ body {
 .valuation-drawer {
     position: fixed;
     top: 0;
-    right: -450px; /* skjult */
-    width: 450px;
+    right: -650px; 
+    width: 650px;
     height: 100vh;
-    background: #fff;
-    transition: right 0.4s ease;
+    background: #ffffff;
+    box-shadow: -6px 0 30px rgba(0,0,0,0.18);
+    transition: right 0.45s ease;
     z-index: 9999;
-    padding: 40px;
+    display: flex;
+    flex-direction: column;
 }
 
+
 .valuation-drawer.open {
-    right: 0; 
+    right: 0;
 }
+
+
+.valuation-drawer__inner {
+    padding: 60px 50px;
+    overflow-y: auto;
+}
+
 
 .drawer-close {
     position: absolute;
-    top: 20px;
-    right: 20px;
-    font-size: 32px;
+    top: 22px;
+    right: 22px;
+    font-size: 34px;
     background: none;
     border: none;
     cursor: pointer;
+    color: #333;
 }
 
-.valuation-drawer h2 {
-    margin-top: 40px;
-    font-size: 28px;
+
+.valuation-drawer__inner h2 {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 18px;
+    color: #222;
 }
+
+
+.valuation-drawer__inner p {
+    font-size: 16px;
+    line-height: 1.55;
+    color: #444;
+    margin-bottom: 30px;
+}
+
 
 .valuation-drawer form {
-    margin-top: 30px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 22px;
 }
+
+.valuation-drawer label {
+    font-size: 15px;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 6px;
+}
+
 
 .valuation-drawer input {
-    padding: 12px;
-    border: 1px solid #ccc;
+    padding: 14px;
+    border: 1px solid #cfcfcf;
+    border-radius: 4px;
     font-size: 16px;
+    background: #f7f7f7;
 }
 
+
 .drawer-submit {
-    margin-top: 20px;
-    padding: 14px;
+    margin-top: 10px;
+    padding: 16px;
     background: #000;
     color: #fff;
     border: none;
-    font-size: 16px;
+    font-size: 17px;
+    font-weight: 600;
     cursor: pointer;
+    border-radius: 4px;
+    transition: 0.2s ease;
+}
+
+.drawer-submit:hover {
+    background: #333;
 }
