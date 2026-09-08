@@ -20,6 +20,12 @@ body {
     position: absolute;
     top: 0;
     z-index: 10;
+    color: #fff;
+}
+
+header:hover{
+    background-color: white;
+    color: #222;
 }
 
 .logo {
