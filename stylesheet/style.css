@@ -184,16 +184,9 @@ header:hover .logo, header:hover img {
     }
 }
 
-/* MOBILE */
-@media (max-width: 900px) {
-    .nav ul {
-        display: none;
-    }
 
-    .mobile-menu-btn {
-        display: block;
-    }
-}
+
+   
 
 /* CAROUSEL SECTION */
 .carousel-section {
@@ -419,4 +412,23 @@ header:hover .logo, header:hover img {
 .drawer-submit:hover {
     background: #333;
     color: #fff;
+}
+
+
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    color: #000000;
+    cursor: pointer;
+    width: 40px;
+}
+
+@media (max-width: 900px) {
+    .nav ul {
+        display: none;
+    }
+    
+    .mobile-menu-btn {
+        display: block;
+    }
 }

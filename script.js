@@ -16,13 +16,6 @@ function bg(){
 }
 
 
-// Mobilmenu toggle
-const mobileBtn = document.getElementById("mobileMenuBtn");
-const nav = document.querySelector(".nav ul");
-
-mobileBtn.addEventListener("click", () => {
-    nav.style.display = nav.style.display === "flex" ? "none" : "flex";
-});
 
 // Fade-in hero content
 window.addEventListener("load", () => {
@@ -35,7 +28,7 @@ window.addEventListener("load", () => {
 
 
 
-// INFINITE CAROUSEL – 3 billeder pr. slide
+
 const track = document.getElementById("carouselTrack");
 const prevBtn = document.getElementById("carouselPrev");
 const nextBtn = document.getElementById("carouselNext");
@@ -43,13 +36,13 @@ const nextBtn = document.getElementById("carouselNext");
 let items = document.querySelectorAll(".carousel-item");
 const itemsPerSlide = 3;
 
-// KLON de første 3 billeder og tilføj dem bagerst
+
 for (let i = 0; i < itemsPerSlide; i++) {
     const clone = items[i].cloneNode(true);
     track.appendChild(clone);
 }
 
-// Opdater items efter kloning
+
 items = document.querySelectorAll(".carousel-item");
 
 let index = 0;
@@ -72,7 +65,7 @@ nextBtn.addEventListener("click", () => {
     if (index === totalSlides - 1) {
         updateCarousel(true); // animér til klonerne
 
-        // Efter animation → hop usynligt tilbage til slide 0
+        // Efter animation  hop usynligt tilbage til slide 0
         setTimeout(() => {
             index = 0;
             updateCarousel(false); // ingen animation
@@ -82,19 +75,19 @@ nextBtn.addEventListener("click", () => {
     }
 });
 
-// PREV
+// NÅR MAN TRYKKER VENSTRE KNAP
 prevBtn.addEventListener("click", () => {
     index--;
 
     const totalSlides = Math.ceil(items.length / itemsPerSlide);
 
-    // Hvis vi går baglæns forbi slide 0
+
     if (index < 0) {
-        // Hop usynligt til klon-slidet (sidste slide)
+        
         index = totalSlides - 1;
         updateCarousel(false);
 
-        // Animér tilbage til sidste rigtige slide
+        
         setTimeout(() => {
             index = totalSlides - 2;
             updateCarousel(true);
@@ -120,4 +113,13 @@ drawerBtn.addEventListener("click", (e) => {
 
 drawerClose.addEventListener("click", () => {
     drawer.classList.remove("open");
+});
+
+
+
+const menuButton = document.querySelector(".mobile-menu-btn");
+const nav = document.querySelector(".nav ul");
+
+menuButton.addEventListener("click", () => {
+    nav.style.display = nav.style.display === "flex" ? "none" : "flex";
 });
