@@ -159,7 +159,6 @@ body {
     flex-shrink: 0;
     border-radius: 0%;
     overflow: hidden;
-    
 }
 
 .carousel-item img {
@@ -171,7 +170,7 @@ body {
 .carousel-item h3 {
     position: absolute;
     bottom: 20px;
-    left: 20px;
+    left: 197px;
     color: #fff;
     font-size: 22px;
     font-weight: 100;
