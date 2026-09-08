@@ -50,11 +50,11 @@ nextBtn.addEventListener("click", () => {
     const itemWidth = items[0].offsetWidth + 40;
     const slideWidth = itemWidth * itemsPerSlide;
 
-    // Hvis vi rammer den klonede slide → reset uden animation
+  
     if (index * itemsPerSlide >= items.length - itemsPerSlide) {
         track.style.transition = "none";
         track.style.transform = `translateX(0px)`;
-        index = 1; // hop til slide 2 (ægte loop)
+        index = 1; 
         setTimeout(updateCarousel, 20);
     } else {
         updateCarousel();
@@ -80,10 +80,16 @@ prevBtn.addEventListener("click", () => {
 });
 
 
-<script>
-// When the user clicks on <div>, open the popup
-function myFunction() {
-  var popup = document.getElementById("myPopup");
-  popup.classList.toggle("show");
-}
-</script>
+
+const drawer = document.getElementById("valuationDrawer");
+const drawerBtn = document.querySelector(".page-banner__button");
+const drawerClose = document.getElementById("drawerClose");
+
+drawerBtn.addEventListener("click", (e) => {
+    e.preventDefault(); 
+    drawer.classList.add("open");
+});
+
+drawerClose.addEventListener("click", () => {
+    drawer.classList.remove("open");
+});

@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: sans-serif;
+    font-family: "Georgia", serif;
     color: #222;
 }
 
@@ -207,7 +207,7 @@ body {
 
 
 .page-banner {
-    background-color:#EBEDED;
+    background-color: #d8d6d3;
     padding: 80px 0;
     margin-top: 0;
     margin-left: 30px;
@@ -228,16 +228,25 @@ body {
     align-items: center;
     text-align: center;
     max-width: 800px;
+<<<<<<< Updated upstream
     font-family: sans-serif;
     font-weight: 100;
+=======
+    margin: 0 auto;
+>>>>>>> Stashed changes
 }
 
 .page-banner__button {
     display: inline-block;
     margin-top: 20px;
     padding: 12px 28px;
+<<<<<<< Updated upstream
     background: transparent;
     color: black;
+=======
+    background: #000;
+    color: #fff;
+>>>>>>> Stashed changes
     text-decoration: none;
     font-size: 12px;
     border-radius: 0%;
@@ -245,3 +254,57 @@ body {
     margin-top: 30px;
 }
 
+
+.valuation-drawer {
+    position: fixed;
+    top: 0;
+    right: -450px; /* skjult */
+    width: 450px;
+    height: 100vh;
+    background: #fff;
+    transition: right 0.4s ease;
+    z-index: 9999;
+    padding: 40px;
+}
+
+.valuation-drawer.open {
+    right: 0; 
+}
+
+.drawer-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 32px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.valuation-drawer h2 {
+    margin-top: 40px;
+    font-size: 28px;
+}
+
+.valuation-drawer form {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.valuation-drawer input {
+    padding: 12px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.drawer-submit {
+    margin-top: 20px;
+    padding: 14px;
+    background: #000;
+    color: #fff;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
