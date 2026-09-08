@@ -117,9 +117,16 @@ drawerClose.addEventListener("click", () => {
 
 
 
-const menuButton = document.querySelector(".mobile-menu-btn");
-const nav = document.querySelector(".nav ul");
+document.addEventListener("DOMContentLoaded", () => {
+    const mobileMenuBtn = document.getElementById("mobileMenuBtn");
+    const mobileNav = document.getElementById("mobileNav");
+    const closeBtn = document.getElementById("closeBtn");
 
-menuButton.addEventListener("click", () => {
-    nav.style.display = nav.style.display === "flex" ? "none" : "flex";
+    mobileMenuBtn.addEventListener("click", () => {
+        mobileNav.classList.add("open");
+    });
+
+    closeBtn.addEventListener("click", () => {
+        mobileNav.classList.remove("open");
+    });
 });

@@ -13,26 +13,45 @@
 
 <body onload="bg()">
 
+<header class="header">
+    <div>
+        <img src="files/logo.svg" alt="Logo" class="logo">
+    </div>
 
-    <header class="header">
-        <div>
-            <img src="files/logo.svg" alt="Logo" class="logo">
-        </div>
+    <nav class="nav">
+        <ul>
+            <li><a href="#">Salgsvurdering</a></li>
+            <li><a href="#">Boligsøgning</a></li>
+            <li><a href="#">Information</a></li>
+            <li><a href="#">Kontakt</a></li>
+            <li><a href="#">Referencer</a></li>
+            <li><a href="#"><img src="files/profile.svg" height="23"></a></li>
+            <li><a href="#"><img src="files/search.svg" height="20"></a></li>
+        </ul>
+    </nav>
 
-        <nav class="nav">
-            <ul>
-                <li><a href="#">Salgsvurdering</a></li>
-                <li><a href="#">Boligsøgning</a></li>
-                <li><a href="#">Information</a></li>
-                <li><a href="#">Kontakt</a></li>
-                <li><a href="#">Referencer</a></li>
-                <li><a href="#"><img src="files/profile.svg" height="23" ></a></li>
-                <li><a href="#"><img src="files/search.svg" height="20" ></a></li>
-            </ul>
-        </nav>
+    <div class="mobile-menu-btn" id="mobileMenuBtn">☰</div>
+</header>
 
-        <div class="mobile-menu-btn" id="mobileMenuBtn">☰</div>
-    </header>
+
+<nav class="mobile-nav" id="mobileNav">
+    <div class="close-btn" id="closeBtn">✕</div>
+
+    <h3 class="mobile-nav__title">KONTAKT</h3>
+    <p class="mobile-nav__description">Telefon: 70 22 12 35</p>
+    <p class="mobile-nav__description">Email: kontakt@lilienhoff.dk</p>
+
+    <hr class="thin-line">
+
+    <ul>
+        <li><a class="mobile-nav__link" href="#">Salgsvurdering</a></li>
+        <li><a class="mobile-nav__link" href="#">Boligsøgning</a></li>
+        <li><a class="mobile-nav__link" href="#">Information</a></li>
+        <li><a class="mobile-nav__link" href="#">Kontakt</a></li>
+        <li><a class="mobile-nav__link" href="#">Referencer</a></li>
+    </ul>
+</nav>
+
 
     <section class="hero">
 
