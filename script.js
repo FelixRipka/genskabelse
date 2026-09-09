@@ -35,20 +35,13 @@ function login(){
     let welcome = false;   
     if(password === gentagpassword && user === gentaguser){
         welcome = true;
+        alert("Du er nu logget ind")
     } else {
         welcome = false;
+         alert("Password eller E-mail er forkert")
     }
-    alert(user);
-    alert(gentaguser);
-    alert(gentagpassword);
-    alert(password);
-    alert(welcome);
 }
-if (welcome = true){
-    alert("Du er nu logget ind")
-} else {
-    alert("Password eller Email er forkert")
-}
+
 
 
 // Fade-in hero content
