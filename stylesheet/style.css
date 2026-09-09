@@ -169,13 +169,8 @@ input[type=text], input[type=password] {
   box-sizing: border-box;
   color: #000;
   font-family: sans-serif;
-  font-weight: 100;
 }
 
-.form-label {
-    font-family: sans-serif;
-    font-weight: 100;
-}
 /* Set a style menu button */
 .nbutton {
   background-color: transparent;
@@ -214,25 +209,29 @@ img.loginlogo {
 /* The Modal (background) */
 .modal {
   display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 3; /* Sit on top */
-  left: 33%;
+  position: fixed;
+  z-index: 3;
+  left: 25%;
   top: 0;
-  width: 767px;
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: transparent; /* Black w/ opacity */
+  width: 1000px;
+  height: 100%;
+  overflow: auto;
+  background-color: transparent; /* modal mackground */
   padding-top: 60px;
+  height: 700px;
 }
 
 /* Modal Content*/
 .modal-content {
   background-color: rgb(84, 81, 81);
   margin-top: 5%;
-  margin-bottom: 10%;
+  margin-bottom: 5%;
+  margin-left: 5%;
   width: 70%;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 .hero-arrow {
@@ -249,6 +248,11 @@ img.loginlogo {
     animation-timing-function: ease;
     animation-fill-mode: forwards;
     animation-iteration-count: infinite;
+}
+
+.form-label {
+    font-family: sans-serif;
+    font-weight: 100;
 }
 
 @keyframes titleAnimationIn{

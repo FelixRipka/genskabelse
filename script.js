@@ -16,7 +16,7 @@ function bg(){
 }
 
 // Get the modal
-var modal = document.getElementById('id01');
+var modal = document.getElementById('inn');
 
 // Closes modal when clicked somewhere else
 window.onclick = function(event) {
@@ -75,6 +75,13 @@ items = document.querySelectorAll(".carousel-item");
 let index = 0;
 
 function updateCarousel(animate = true) {
+    if (index === 0 && animate) {
+    
+}
+
+    
+
+    
     const itemWidth = items[0].offsetWidth + 40; // 40px gap
     const slideWidth = itemWidth * itemsPerSlide;
 
