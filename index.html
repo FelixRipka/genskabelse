@@ -22,7 +22,10 @@
         <ul>
             <li><a href="#">Salgsvurdering</a></li>
             <li><a href="#">Boligsøgning</a></li>
-            <li><a href="#">Information</a></li>
+            <li>
+            <button onclick="document.getElementById('Gallery-Container').style.display='flex'" style="width:auto;" class = "nbutton">
+                <p>Gallery</p>
+            </button></li>
             <li><a href="#">Kontakt</a></li>
             <li><a href="#">Referencer</a></li>
             <li>
@@ -62,6 +65,66 @@
   </form>
 </div>
 
+<div class="galleryContainer" id="Gallery-Container">
+    <div class="galleryImages">
+        <div class="imageCount">1 / 6</div>
+        <img src="files/hus1.jpg" style="width:80%">
+    </div>
+
+    <div class="galleryImages">
+        <div class="imageCount">2 / 6</div>
+        <img src="files/hus2.jpg" style="width:80%">
+    </div>
+
+    <div class="galleryImages">
+        <div class="imageCount">3 / 6</div>
+        <img src="files/hus3.jpg" style="width:80%">
+    </div>
+    
+    <div class="galleryImages">
+        <div class="imageCount">4 / 6</div>
+        <img src="files/hus4.jpg" style="width:80%">
+    </div>
+
+    <div class="galleryImages">
+        <div class="imageCount">5 / 6</div>
+        <img src="files/hus5.jpg" style="width:80%">
+    </div>
+    
+    <div class="galleryImages">
+        <div class="imageCount">6 / 6</div>
+        <img src="files/hus6.jpg" style="width:80%">
+    </div>
+    
+    <a class="prevImage" onclick="plusSlides(-1)">❮</a>
+    <a class="nextImage" onclick="plusSlides(1)">❯</a>
+
+    <div class="caption_galleryContainer">
+        <p id="Caption"></p>
+    </div>
+
+    <div class="row">
+        <div class="column">
+            <img class="galleryPreview" src="files/hus1.jpg" style="width:20%" onclick="currentSlide(1)">
+        </div>
+        <div class="column">
+            <img class="galleryPreview" src="files/hus2.jpg" style="width:20%" onclick="currentSlide(2)">
+        </div>
+        <div class="column">
+            <img class="galleryPreview" src="files/hus3.jpg" style="width:20%" onclick="currentSlide(3)">
+        </div>
+        <div class="column">
+            <img class="galleryPreview" src="files/hus4.jpg" style="width:20%" onclick="currentSlide(4)">
+        </div>
+        <div class="column">
+            <img class="galleryPreview" src="files/hus5.jpg" style="width:20%" onclick="currentSlide(5)">
+        </div>    
+        <div class="column">
+            <img class="galleryPreview" src="files/hus6.jpg" style="width:20%" onclick="currentSlide(6)">
+        </div>
+    </div>
+</div>
+
 
 <nav class="mobile-nav" id="mobileNav">
     <div class="close-btn" id="closeBtn">✕</div>
@@ -75,7 +138,7 @@
     <ul>
         <li><a class="mobile-nav__link" href="#">Salgsvurdering</a></li>
         <li><a class="mobile-nav__link" href="#">Boligsøgning</a></li>
-        <li><a class="mobile-nav__link" href="#">Information</a></li>
+        <li><a class="mobile-nav__link" href="#">Gallery</a></li>
         <li><a class="mobile-nav__link" href="#">Kontakt</a></li>
         <li><a class="mobile-nav__link" href="#">Referencer</a></li>
     </ul>

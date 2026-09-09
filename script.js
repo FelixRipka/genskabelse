@@ -238,3 +238,35 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
+
+
+// gallery shit
+
+let galleryIndex = 1;
+showGallery(galleryIndex);
+
+function plusGallery(n) {
+    showGallery(galleryIndex += n);
+}
+
+function currentGallery(n) {
+    showGallery(galleryIndex = n);
+}
+
+function showGallery(n) {
+    let i;
+    let gallery = document.getElementsByClassName("galleryImages");
+    let dots = document.getElementsByClassName("galleryPreview");
+    let captionText = document.getElementById("caption");
+    if (n > gallery.length) {galleryIndex = 1}
+    if (n < 1) {galleryIndex = gallery.length}
+    for (i = 0; i < gallery.length; i++) {
+        gallery[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    gallery[galleryIndex-1].style.display = "block";
+    dots[galleryIndex-1].className += " active";
+    captionText.innerHTML = dots[galleryIndex-1].alt;
+}

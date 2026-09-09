@@ -35,7 +35,7 @@ body {
     list-style: none;
 }
 
-.nav a {
+.nav a, nav p {
     text-decoration: none;
     font-size: 16px;
     font-family: sans-serif;
@@ -47,7 +47,7 @@ header:hover{
     transition: all 1s ease;
 }
 
-header:hover a {
+header:hover a, header:hover p {
     color: #000;
     transition: all 1s ease;
 }
@@ -708,4 +708,87 @@ img.loginlogo {
 .fav-btn:hover {
     background-color: black;
     color: white;
+}
+
+
+/* gallery shit pls work pls */
+
+.galleryContainer {
+    display: none;
+    position: fixed;
+    box-sizing: border-box;
+    z-index: 69;
+}
+
+.galleryContainer img {
+    vertical-align: middle;
+}
+
+/* Next & previous buttons */
+.prevImage,
+.nextImage {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.nextImage {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prevImage:hover,
+.nextImage:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.imageCount {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* Container for image text */
+.caption_galleryContainer {
+    text-align: center;
+    background-color: #222;
+    padding: 2px 16px;
+    color: white;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Six columns side by side */
+.column {
+    float: left;
+    width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.galleryPreview {
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+.active,
+.galleryPreview:hover {
+    opacity: 1;
 }
