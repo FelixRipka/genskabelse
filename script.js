@@ -42,35 +42,36 @@ function login(){
     }
 }
 
-let slideIndex = 1;
-showSlides(slideIndex);
+// gallery stuff below
+let galleryIndex = 1;
+showGalleryImages(galleryIndex);
 
-function plusSlides(n) {
-  showSlides(slideIndex += n);
+function plusGallery(n) {
+    showGalleryImages(galleryIndex += n);
 }
 
-function currentSlide(n) {
-  showSlides(slideIndex = n);
+function currentGalleryImg(n) {
+    showGalleryImages(galleryIndex = n);
 }
 
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("demo");
-  let captionText = document.getElementById("caption");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-  captionText.innerHTML = dots[slideIndex-1].alt;
+function showGalleryImages(n) {
+    let i;
+    let galleries = document.getElementsByClassName("galleryImages");
+    let dots = document.getElementsByClassName("demo");
+    let captionText = document.getElementById("caption");
+    if (n > galleries.length) {galleryIndex = 1}
+    if (n < 1) {galleryIndex = galleries.length}
+    for (i = 0; i < galleries.length; i++) {
+        galleries[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    galleries[galleryIndex-1].style.display = "block";
+    dots[galleryIndex-1].className += " active";
+    captionText.innerHTML = dots[galleryIndex-1].alt;
 }
-
+// gallery stuff above
 
 
 // Fade-in hero content

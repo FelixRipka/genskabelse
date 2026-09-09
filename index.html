@@ -22,19 +22,19 @@
         <ul>
             <li><a href="#">Salgsvurdering</a></li>
             <li><a href="#">Boligsøgning</a></li>
-            <li><a href="#">Information</a></li>
+            <li>
+                <button onclick="document.getElementById('galleryElement').style.display='flex'" style="width:auto;" class = "nbutton">
+                    <p>Galleri</p>
+                </button>
+            </li>
             <li><a href="#">Kontakt</a></li>
             <li><a href="#">Referencer</a></li>
             <li>
-            <button onclick="document.getElementById('inn').style.display='flex'" style="width:auto;" class = "nbutton">
-                <img src="files/profile.svg" height="23">
-            </button>
+                <button onclick="document.getElementById('inn').style.display='flex'" style="width:auto;" class = "nbutton">
+                    <img src="files/profile.svg" height="23">
+                </button>
             </li>
-            <li>
-            <button onclick="document.getElementById('slide').style.display='flex'" style="width:auto;" class = "nbutton">
-                <img src="files/search.svg" height="20">
-            </button>
-            </li>
+            <li><a href="#"><img src="files/search.svg" height="20"></a></li>
         </ul>
     </nav>
 
@@ -79,15 +79,13 @@
     <ul>
         <li><a class="mobile-nav__link" href="#">Salgsvurdering</a></li>
         <li><a class="mobile-nav__link" href="#">Boligsøgning</a></li>
-        <li><a class="mobile-nav__link" href="#">Information</a></li>
+        <li><a class="mobile-nav__link" href="#">Galleri</a></li>
         <li><a class="mobile-nav__link" href="#">Kontakt</a></li>
         <li><a class="mobile-nav__link" href="#">Referencer</a></li>
     </ul>
 </nav>
 
     <section class="hero">
-
-        
         <video id = "video" class="hero-video" autoplay muted loop playsinline></video>
 
         <div class="hero-overlay"></div>
@@ -100,6 +98,7 @@
                 <a class="cta secondary" href="#">BESTIL VURDERING</a>
             </div>
         </div>
+        
         <div>
             <img src="files/arrow.svg" class="hero-arrow">
         </div>
@@ -110,7 +109,6 @@
     <button class="carousel-btn left" id="carouselPrev">&#10094;</button>
 
     <div class="carousel-track" id="carouselTrack">
-
       
         <div class="carousel-item">
             <img src="files/hus1.jpg" alt="Nyeste">
@@ -126,8 +124,8 @@
             <img src="files/hus3.jpg" alt="Ved vandet">
             <h3 class="carousel-item__title">VED VANDET</h3>
         </div>
-
        
+
         <div class="carousel-item">
             <img src="files/hus4.jpg" alt="Kategori 4">
             <h3 class="carousel-item__title">PÅ LANDET</h3>
@@ -184,13 +182,12 @@
 
 </section>
 
-
     <div class="valuation-drawer" id="valuationDrawer">
     <div class="valuation-drawer__inner">
         <button class="drawer-close" id="drawerClose">×</button>
 
-       <h2 class="drawer-title">BESTIL EN VURDERING</h2>
-<p class="drawer-description">Udfyld formularen, og vi kontakter dig senest den følgende hverdag. Du er også velkommen til at ringe til os på telefon 70 22 12 35. Vi gør opmærksom på, at vurderingen ikke koster noget.</p>
+        <h2 class="drawer-title">BESTIL EN VURDERING</h2>
+        <p class="drawer-description">Udfyld formularen, og vi kontakter dig senest den følgende hverdag. Du er også velkommen til at ringe til os på telefon 70 22 12 35. Vi gør opmærksom på, at vurderingen ikke koster noget.</p>
 
         <form>
             <label>Navn:</label>
@@ -210,66 +207,72 @@
     </div>
 </div>
 
-<div id="slide" class="show">
-    <div class="container-slide">
-  <div class="mySlides">
-    <div class="numbertext">1 / 6</div>
-    <img src="files/hus1.jpg" style="width:100%" class = "img-midle">
-  </div>
-
-  <div class="mySlides">
-    <div class="numbertext">2 / 6</div>
-    <img src="files/hus2.jpg" style="width:100%" class = "img-midle">
-  </div>
-
-  <div class="mySlides">
-    <div class="numbertext">3 / 6</div>
-    <img src="files/hus3.jpg" style="width:100%" class = "img-midle">
-  </div>
+<div id="galleryElement" class="galleryElement">
+    <div class="galleryContainer">
+    <button class="closeGallery" onclick="document.getElementById('galleryElement').style.display='none'">&times;</button>
     
-  <div class="mySlides">
-    <div class="numbertext">4 / 6</div>
-    <img src="files/hus4.jpg" style="width:100%" class = "img-midle">
-  </div>
+    <div class="galleryImages">
+        <div class="imageCount">1 / 6</div>
+        <img src="files/hus1.jpg" style="width:100%" class="imageFocus">
+    </div>
 
-  <div class="mySlides">
-    <div class="numbertext">5 / 6</div>
-    <img src="files/hus5.jpg" style="width:100%" class = "img-midle">
-  </div>
-    
-  <div class="mySlides">
-    <div class="numbertext">6 / 6</div>
-    <img src="files/hus6.jpg" style="width:100%" class = "img-midle">
-  </div>
-    
-  <a class="prev" onclick="plusSlides(-1)">❮</a>
-  <a class="next" onclick="plusSlides(1)">❯</a>
+    <div class="galleryImages">
+        <div class="imageCount">2 / 6</div>
+        <img src="files/hus2.jpg" style="width:100%" class="imageFocus">
+    </div>
 
-  <div class="caption-container">
-    <p id="caption"></p>
-  </div>
+    <div class="galleryImages">
+        <div class="imageCount">3 / 6</div>
+        <img src="files/hus3.jpg" style="width:100%" class="imageFocus">
+    </div>
+        
+    <div class="galleryImages">
+        <div class="imageCount">4 / 6</div>
+        <img src="files/hus4.jpg" style="width:100%" class="imageFocus">
+    </div>
 
-  <div class="row">
-    <div class="column">
-      <img class="demo cursor" src="files/hus1.jpg" style="width:100%" onclick="currentSlide(1)" alt="The Woods" class = "img-midle">
+    <div class="galleryImages">
+        <div class="imageCount">5 / 6</div>
+        <img src="files/hus6.jpg" style="width:100%" class="imageFocus">
     </div>
-    <div class="column">
-      <img class="demo cursor" src="files/hus2.jpg" style="width:100%" onclick="currentSlide(2)" alt="Cinque Terre" class = "img-midle">
+        
+    <div class="galleryImages">
+        <div class="imageCount">6 / 6</div>
+        <img src="files/hus5.jpg" style="width:100%" class="imageFocus">
     </div>
-    <div class="column">
-      <img class="demo cursor" src="files/hus3.jpg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords" class = "img-midle">
+
+    <a class="prevGallery" onclick="plusGallery(-1)">❮</a>
+    <a class="nextGallery" onclick="plusGallery(1)">❯</a>
+
+    <div class="captionContainer">
+        <p id="caption"></p>
     </div>
-    <div class="column">
-      <img class="demo cursor" src="files/hus4.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights" class = "img-midle">
+
+    <div class="row">
+        <div class="column">
+            <img class="demo cursor" src="files/hus1.jpg" style="width:100%" onclick="currentGalleryImg(1)" alt="Strandvilla - 1" class="imageFocus">
+        </div>
+        
+        <div class="column">
+            <img class="demo cursor" src="files/hus2.jpg" style="width:100%" onclick="currentGalleryImg(2)" alt="Strandvilla - 2" class="imageFocus">
+        </div>
+        
+        <div class="column">
+            <img class="demo cursor" src="files/hus3.jpg" style="width:100%" onclick="currentGalleryImg(3)" alt="Familiehjem" class="imageFocus">
+        </div>
+        
+        <div class="column">
+            <img class="demo cursor" src="files/hus4.jpg" style="width:100%" onclick="currentGalleryImg(4)" alt="Landejendom - 1" class="imageFocus">
+        </div>
+        
+        <div class="column">
+            <img class="demo cursor" src="files/hus6.jpg" style="width:100%" onclick="currentGalleryImg(5)" alt="Landejendom - 2" class="imageFocus">
+        </div>    
+        
+        <div class="column">
+            <img class="demo cursor" src="files/hus5.jpg" style="width:100%" onclick="currentGalleryImg(6)" alt="Rustikt hjem" class="imageFocus">
+        </div>
     </div>
-    <div class="column">
-      <img class="demo cursor" src="files/hus5.jpg" style="width:100%" onclick="currentSlide(5)" alt="Nature and sunrise" class = "img-midle">
-    </div>    
-    <div class="column">
-      <img class="demo cursor" src="files/hus6.jpg" style="width:100%" onclick="currentSlide(6)" alt="Snowy Mountains" class = "img-midle">
-    </div>
-  </div>
-</div>
 </div>
 
 
