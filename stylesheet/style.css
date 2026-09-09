@@ -209,14 +209,14 @@ img.loginlogo {
 /* The Modal (background) */
 .modal {
   display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 3; /* Sit on top */
+  position: fixed;
+  z-index: 3;
   left: 25%;
   top: 0;
   width: 1000px;
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: transparent; /* Black w/ opacity */
+  height: 100%;
+  overflow: auto;
+  background-color: transparent; /* modal mackground */
   padding-top: 60px;
   height: 700px;
 }
