@@ -116,6 +116,7 @@ drawerClose.addEventListener("click", () => {
 });
 
 
+//Navigationsmenuen
 
 document.addEventListener("DOMContentLoaded", () => {
     const mobileMenuBtn = document.getElementById("mobileMenuBtn");
@@ -128,5 +129,85 @@ document.addEventListener("DOMContentLoaded", () => {
 
     closeBtn.addEventListener("click", () => {
         mobileNav.classList.remove("open");
+    });
+});
+
+
+let totalFavorites = 0;
+
+// ARRAY + OBJEKT
+const properties = [
+    { id: 1, title: "Strandvilla i Liseleje, Strandvejen 23 - 3360 Liseleje", price: 12500000, isFavorite: false },
+    { id: 2, title: "Skovhus i Nordsjælland, Landestræde 1 - 3100 Hornbæk", price: 8500000, isFavorite: false },
+    { id: 3, title: "Penthouse i København, Fredens Allé 205 - 1473 København K", price: 17500000, isFavorite: false }
+];
+
+function renderFavorites() {
+    const widget = document.getElementById("favoriteWidget");
+
+    let html = "<h3>Dine favoritboliger</h3>";
+
+    if (totalFavorites === 0) {
+        html += "<p>Du har ingen favoritter endnu.</p>";
+    } else {
+        html += `<p>Antal favoritter: ${totalFavorites}</p>`;
+    }
+
+    html += "<ul>";
+    for (let i = 0; i < properties.length; i++) {
+        if (properties[i].isFavorite === true) {
+            html += `<li>${properties[i].title} – ${properties[i].price} kr.</li>`;
+        }
+    }
+    html += "</ul>";
+
+    widget.innerHTML = html;
+}
+
+function toggleFavorite(id) {
+    let found = false;
+
+    for (let i = 0; i < properties.length; i++) {
+        if (properties[i].id === id) {
+            // Toggle favorit-status
+            properties[i].isFavorite = !properties[i].isFavorite;
+            found = true;
+
+            // Opdater antal favoritter
+            if (properties[i].isFavorite === true) {
+                totalFavorites++;
+            } else {
+                totalFavorites--;
+            }
+
+            const card = document.querySelector(`.property-card[data-id="${id}"]`);
+            const btn = card.querySelector(".fav-btn");
+
+            if (properties[i].isFavorite === true) {
+                btn.textContent = "Fjern";
+            } else {
+                btn.textContent = "Favoritér";
+            }
+        }
+    }
+
+    if (found === false) {
+        console.log("Boligen findes ikke.");
+    } else {
+        renderFavorites();
+    }
+}
+
+renderFavorites();
+
+//Card-knapperne aktiverer favorit-funktionen
+document.addEventListener("DOMContentLoaded", () => {
+    const favButtons = document.querySelectorAll(".fav-btn");
+
+    favButtons.forEach(btn => {
+        btn.addEventListener("click", () => {
+            const id = parseInt(btn.parentElement.getAttribute("data-id"));
+            toggleFavorite(id);
+        });
     });
 });

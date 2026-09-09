@@ -521,3 +521,115 @@ header:hover .mobile-menu-btn {
     font-family: sans-serif;
     font-weight: 100;
 }
+
+/* --- Sektion: Gemte herligheder --- */
+
+#savedProperties {
+    margin-top: 60px;
+    padding: 40px 0;
+    background-color: #f7f7f7; /* Lys baggrund så alt står tydeligt */
+    text-align: center;
+}
+
+/* Overskrift */
+#savedProperties h2 {
+    font-size: 32px;
+    font-weight: 100;
+    margin-bottom: 20px;
+    color: black;
+    font-family: sans-serif;
+}
+
+/* --- Favorit-listen (flyttet op under overskriften) --- */
+
+#favoriteWidget {
+    max-width: 600px;
+    margin: 0 auto 40px auto; /* Centreret og med luft ned til cards */
+    background: transparent;
+    padding: 25px 30px;
+    border-radius: 0px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    text-align: left;
+}
+
+#favoriteWidget h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    font-family: sans-serif;
+    font-weight: 300;
+    color: black;
+}
+
+#favoriteWidget p {
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-family: sans-serif;
+    font-weight: 100;
+    color: black;
+}
+
+#favoriteWidget ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#favoriteWidget li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 15px;
+    font-family: sans-serif;
+    font-weight: 100;
+    color: black;
+}
+
+/* --- Cards --- */
+
+.property-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.property-card {
+    background-color: #d8d6d3;
+    padding: 20px;
+    border-radius: 0px;
+    width: 300px;
+    text-align: center;
+}
+
+.property-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 0px;
+}
+
+.property-title {
+    font-size: 18px;
+    margin: 12px 0;
+    color: black;
+    font-family: sans-serif;
+    font-weight: 100;
+}
+
+/* --- Favoritér-knapper --- */
+
+.fav-btn {
+    background-color: transparent;
+    color: black;
+    padding: 8px 18px;
+    border: black 1px solid;
+    border-radius: 0px;
+    cursor: pointer;
+    font-size: 15px;
+    font-family: sans-serif;
+    font-weight: 100;
+}
+
+.fav-btn:hover {
+    background-color: black;
+    color: white;
+}
