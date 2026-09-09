@@ -42,6 +42,13 @@ function login(){
     }
 }
 
+let option = document.getElementById("by");
+let liste = [" ","Odense", "København", "Ejby"];
+
+for(let i = 0; i < liste.length; i++){
+option.innerHTML += "<option>" + liste[i] + "</option>";
+} 
+
 // gallery stuff below
 let galleryIndex = 1;
 showGalleryImages(galleryIndex);
