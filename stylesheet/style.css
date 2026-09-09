@@ -169,13 +169,8 @@ input[type=text], input[type=password] {
   box-sizing: border-box;
   color: #000;
   font-family: sans-serif;
-  font-weight: 100;
 }
 
-.form-label {
-    font-family: sans-serif;
-    font-weight: 100;
-}
 /* Set a style menu button */
 .nbutton {
   background-color: transparent;
@@ -216,12 +211,12 @@ img.loginlogo {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 3; /* Sit on top */
-  left: 33%;
+  left: 20%;
   top: 0;
-  width: 767px;
+  width: 1000px;
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
-  background-color: transparent; /* Black w/ opacity */
+  background-color: green; /* Black w/ opacity */
   padding-top: 60px;
 }
 
@@ -229,10 +224,11 @@ img.loginlogo {
 .modal-content {
   background-color: rgb(84, 81, 81);
   margin-top: 5%;
-  margin-bottom: 10%;
+  margin-bottom: 15%;
+  margin-left: 12%;
   width: 70%;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
 .hero-arrow {
