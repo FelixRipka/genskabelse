@@ -30,7 +30,11 @@
                 <img src="files/profile.svg" height="23">
             </button>
             </li>
-            <li><a href="#"><img src="files/search.svg" height="20"></a></li>
+            <li>
+            <button onclick="document.getElementById('slide').style.display='flex'" style="width:auto;" class = "nbutton">
+                <img src="files/search.svg" height="20">
+            </button>
+            </li>
         </ul>
     </nav>
 
@@ -204,6 +208,68 @@
             <button class="drawer-submit">BESTIL SALGSVURDERING</button>
         </form>
     </div>
+</div>
+
+<div id="slide" class="show">
+    <div class="container-slide">
+  <div class="mySlides">
+    <div class="numbertext">1 / 6</div>
+    <img src="files/hus1.jpg" style="width:100%" class = "img-midle">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 6</div>
+    <img src="files/hus2.jpg" style="width:100%" class = "img-midle">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 6</div>
+    <img src="files/hus3.jpg" style="width:100%" class = "img-midle">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">4 / 6</div>
+    <img src="files/hus4.jpg" style="width:100%" class = "img-midle">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 6</div>
+    <img src="files/hus5.jpg" style="width:100%" class = "img-midle">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">6 / 6</div>
+    <img src="files/hus6.jpg" style="width:100%" class = "img-midle">
+  </div>
+    
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="files/hus1.jpg" style="width:100%" onclick="currentSlide(1)" alt="The Woods" class = "img-midle">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="files/hus2.jpg" style="width:100%" onclick="currentSlide(2)" alt="Cinque Terre" class = "img-midle">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="files/hus3.jpg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords" class = "img-midle">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="files/hus4.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights" class = "img-midle">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="files/hus5.jpg" style="width:100%" onclick="currentSlide(5)" alt="Nature and sunrise" class = "img-midle">
+    </div>    
+    <div class="column">
+      <img class="demo cursor" src="files/hus6.jpg" style="width:100%" onclick="currentSlide(6)" alt="Snowy Mountains" class = "img-midle">
+    </div>
+  </div>
+</div>
 </div>
 
 
