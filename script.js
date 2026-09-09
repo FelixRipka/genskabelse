@@ -247,7 +247,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-// gallery shit
+// gallery shit below
 
 let galleryIndex = 1;
 showGallery(galleryIndex);
@@ -264,7 +264,7 @@ function showGallery(n) {
     let i;
     let gallery = document.getElementsByClassName("galleryImages");
     let dots = document.getElementsByClassName("galleryPreview");
-    let captionText = document.getElementById("caption");
+    let captionText = document.getElementById("Caption");
     if (n > gallery.length) {galleryIndex = 1}
     if (n < 1) {galleryIndex = gallery.length}
     for (i = 0; i < gallery.length; i++) {
@@ -277,3 +277,5 @@ function showGallery(n) {
     dots[galleryIndex-1].className += " active";
     captionText.innerHTML = dots[galleryIndex-1].alt;
 }
+
+// gallery shit above
