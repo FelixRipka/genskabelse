@@ -1,9 +1,9 @@
 let videos = [];
-videos.push("/files/boatvideo1.mp4");
-videos.push("/files/boatvideo2.mp4");
-videos.push("/files/boatvideo3.mp4");
-videos.push("/files/skovliv1.mp4");
-videos.push("/files/skovliv3.mp4");
+videos.push("files/boatvideo1.mp4");
+videos.push("files/boatvideo2.mp4");
+videos.push("files/boatvideo3.mp4");
+videos.push("files/skovliv1.mp4");
+videos.push("files/skovliv3.mp4");
 
 const v = document.getElementById("video");
 
@@ -13,6 +13,36 @@ function bg(){
     let mov = videos[randomVideo];
 
     v.innerHTML += `<source src= ${mov} type="video/mp4">`;
+}
+
+// Get the modal
+var modal = document.getElementById('id01');
+
+// Closes modal when clicked somewhere else
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+function login(){    
+    let gentag = document.getElementById('gpsw').value;
+    let password = document.getElementById('psw').value;
+    let welcome = false;   
+    if(gentag === password){
+        welcome = true;
+    } else {
+        welcome = false;
+    }
+    alert(gentag);
+    alert(password);
+    alert(welcome);
+}
+
+//lav det samme for email
+
+if (mail === gentagmail && gentag === password){
+    //log in
 }
 
 

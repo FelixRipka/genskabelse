@@ -25,13 +25,39 @@
             <li><a href="#">Information</a></li>
             <li><a href="#">Kontakt</a></li>
             <li><a href="#">Referencer</a></li>
-            <li><a href="#"><img src="files/profile.svg" height="23"></a></li>
+            <li>
+            <button onclick="document.getElementById('id01').style.display='flex'" style="width:auto;" class = "nbutton">
+                <img src="files/profile.svg" height="23">
+            </button>
+            </li>
             <li><a href="#"><img src="files/search.svg" height="20"></a></li>
         </ul>
     </nav>
 
     <div class="mobile-menu-btn" id="mobileMenuBtn">☰</div>
 </header>
+
+<div id="id01" class="modal">
+  
+  <form class="modal-content">
+    <div class="imgcontainer">
+      <img src="files/logo_login.png" alt="logo" class="loginlogo">
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>E-mail</b></label>
+      <input type="text" placeholder="" name="uname" required>
+
+      <label for="psw"><b>Adgangskode</b></label>
+      <input id="psw" type="password" placeholder="" name="psw" required>
+
+      <label for="psw"><b>Gentag Adgangskode</b></label>
+      <input id="gpsw" type="password" placeholder="" name="pswg" required>
+        
+      <button type="submit" class = "loginbtn" onclick="login()">Login</button>
+    </div>
+  </form>
+</div>
 
 
 <nav class="mobile-nav" id="mobileNav">
