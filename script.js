@@ -16,7 +16,7 @@ function bg(){
 }
 
 // Get the modal
-var modal = document.getElementById('id01');
+var modal = document.getElementById('inn');
 
 // Closes modal when clicked somewhere else
 window.onclick = function(event) {
