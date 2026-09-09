@@ -26,25 +26,29 @@ window.onclick = function(event) {
 }
 
 function login(){    
-    let gentag = document.getElementById('gpsw').value;
     let password = document.getElementById('psw').value;
+    let gentagpassword = document.getElementById('gpsw').value;
+    let user = document.getElementById('mail').value;
+    let gentaguser = document.getElementById('gmail').value;
+    
+    
     let welcome = false;   
-    if(gentag === password){
+    if(password === gentagpassword && user === gentaguser){
         welcome = true;
     } else {
         welcome = false;
     }
-    alert(gentag);
+    alert(user);
+    alert(gentaguser);
+    alert(gentagpassword);
     alert(password);
     alert(welcome);
 }
-
-//lav det samme for email
-
-if (mail === gentagmail && gentag === password){
-    //log in
+if (welcome = true){
+    alert("Du er nu logget ind")
+} else {
+    alert("Password eller Email er forkert")
 }
-
 
 
 // Fade-in hero content
